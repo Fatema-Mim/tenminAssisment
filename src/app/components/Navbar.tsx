@@ -4,13 +4,12 @@ import React, { useState } from "react";
 import logo from "@/app/assets/10mslogo.svg"; ;
 import Image from "next/image";
 
-export default function Navbar() {
-  const [language, setLanguage] = useState<"en" | "bn">("en");
+interface nav {
+  language:"en" | "bn",
+  toggleLanguage: () => void,
+}
 
-  const toggleLanguage = () => {
-    const newLang = language === "en" ? "bn" : "en";
-    setLanguage(newLang);
-  };
+export default function Navbar({language,toggleLanguage}:nav) {
 
   return (
     <nav className="sticky top-0 z-50 border-b bg-white">
