@@ -10,7 +10,7 @@ export default function CourseFeature({ exclusive }: CourseFeatureProps) {
   if (!exclusive) return null;
 
   return (
-    <div className="mb-7">
+    <div className="mb-7" id= "exclusive-section">
       <SectionTitle>{exclusive.sectionName}</SectionTitle>
 
       <CardWrapper>

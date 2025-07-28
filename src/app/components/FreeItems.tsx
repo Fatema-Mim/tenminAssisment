@@ -9,7 +9,7 @@ interface FreeItemsProps{
 
 export default function FreeItems({freeItems}:FreeItemsProps) {
   return (
-    <div className="mb-7">
+    <div className="mb-7" id= "freebies-section" >
       <SectionTitle>{freeItems?.name}</SectionTitle>
       <div
         className="relative w-full overflow-hidden bg-no-repeat bg-cover  rounded-lg bg-[url(https://cdn.10minuteschool.com/images/banner_background_1731401239364.png)]"

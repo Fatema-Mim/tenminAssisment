@@ -75,16 +75,16 @@ export default function Footer() {
                 আমাদের যোগাযোগ মাধ্যম
               </h3>
               <p className="mb-4 text-base font-normal">
-                কল করুন: <span className="text-green">16910 (24x7)</span>
+                কল করুন: <span className="text-green-600">16910 (24x7)</span>
               </p>
               <p className="mb-4 text-base font-normal">
-                হোয়াটসঅ্যাপ: <span className="text-green">+8801896016252 (24x7)</span>
+                হোয়াটসঅ্যাপ: <span className="text-green-600">+8801896016252 (24x7)</span>
               </p>
               <p className="mb-4 text-base font-normal">
-                দেশের বাহির থেকে: <span className="text-green">+880 9610916910</span>
+                দেশের বাহির থেকে: <span className="text-green-600">+880 9610916910</span>
               </p>
               <p className="mb-2 text-base font-normal">
-                ইমেইল: <span className="text-green">support@10minuteschool.com</span>
+                ইমেইল: <span className="text-green-600">support@10minuteschool.com</span>
               </p>
             </div>
 

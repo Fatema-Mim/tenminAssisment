@@ -72,7 +72,7 @@ export default function Testimonials ({testimonials}:TestimonialsProps) {
     const isDisabled = currentSlide === 0;
 
     return (
-      <div
+      <div id= "testimonial-section"
         className={`absolute left-2 top-1/2 z-10 -translate-y-1/2 cursor-pointer ${
           isDisabled ? "opacity-30 pointer-events-none" : ""
         }`}
@@ -136,7 +136,7 @@ export default function Testimonials ({testimonials}:TestimonialsProps) {
   };
 
   return (
-    <div className="mb-7">
+    <div className="mb-7 w-[100vw] md:w-full" >
       <SectionTitle>{testimonials?.sectionName}</SectionTitle>
 
       <div className="slider-container relative">
@@ -153,6 +153,7 @@ export default function Testimonials ({testimonials}:TestimonialsProps) {
               image={item.profile_image}
               videoId={item.video_url}
               thumb={item.thumb} 
+              testimonial={item.testimonial}
             />
           ))}
         </Slider>

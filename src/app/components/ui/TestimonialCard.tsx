@@ -6,6 +6,7 @@ type TestimonialCardProps = {
   image: string;
   videoId: string;
   thumb: string;
+  testimonial:string;
 };
 
 export default function TestimonialCard({
@@ -14,6 +15,8 @@ export default function TestimonialCard({
   image,
   videoId,
   thumb,
+  testimonial
+
 }: TestimonialCardProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -22,8 +25,8 @@ export default function TestimonialCard({
   }
 
   return (
-    <div className="mr-4">
-      <div className="relative mt-5 w-[260px] md:w-[372px] min-h-[250px] md:min-h-[297px] rounded-lg border p-6 flex flex-col justify-between bg-white">
+    <div className="mr-2">
+      <div className="relative mt-5 rounded-lg border p-6 flex flex-col justify-between bg-white">
         <div className="absolute -top-4 left-5 flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[#FCE0D6] p-2">
           <div className="flex">
             <svg
@@ -55,23 +58,27 @@ export default function TestimonialCard({
           className="w-full mb-4 overflow-hidden rounded-md aspect-video cursor-pointer"
           onClick={handlePlayVideo}
         >
-          {isPlaying ? (
-            <iframe
-              width="322"
-              height="181"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Testimonial Video"
-            />
-          ) : (
-            <img
-              src={thumb}
-              alt={`Video thumbnail for ${name}`}
-              className="w-full h-full object-cover rounded-md"
-            />
-          )}
+         {isPlaying ? (
+    <iframe
+      width="322"
+      height="181"
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Testimonial Video"
+    />
+  ) : thumb ? (
+    <img
+      src={thumb}
+      alt={`Video thumbnail for ${name}`}
+      className="w-full h-full object-cover rounded-md"
+    />
+  ) : (
+    <div className="w-full h-full flex items-center justify-center bg-gray-100 p-4 text-gray-600 text-sm italic rounded-md text-center leading-relaxed">
+      {testimonial}
+    </div>
+  )}
         </div>
 
         <div className="flex gap-4 items-center">

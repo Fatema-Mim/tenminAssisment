@@ -9,33 +9,6 @@ interface FaqProps {
   faq?: FAQSection | null;
 }
 
-const data = [
-  {
-    title: "Introduction",
-    content: "Welcome to the course! Here's what you’ll learn.",
-  },
-  {
-    title: "IELTS Support Group",
-    content: "Exclusive Support Group প্রাপ্তিতে জয়েন করার নিয়মাবলী",
-  },
-  {
-    title: "Academic Reading",
-    content: "Learn academic reading strategies and practice sets.",
-  },
-  {
-    title: "Reading Mock Test",
-    content: "Here are some mock tests to help you prepare.",
-  },
-  { title: "Listening", content: "Listening practice materials and tips." },
-  {
-    title: "Speaking",
-    content: "Tips and strategies for IELTS speaking section.",
-  },
-  {
-    title: "Writing",
-    content: "Detailed breakdown of academic writing tasks.",
-  },
-];
 
 export default function Faq({ faq }: FaqProps) {
   const [showAll, setShowAll] = useState(false);
@@ -49,7 +22,7 @@ export default function Faq({ faq }: FaqProps) {
   };
 
   return (
-    <div>
+    <div id= "faq-section">
       <SectionTitle>{faq?.sectionName}</SectionTitle>
       <div className="relative mb-20">
         <CardWrapper>

@@ -14,7 +14,7 @@ interface AboutSection {
 export default function AboutCourse({ about }: AboutSection) {
   
   return (
-    <div className="mb-7">
+    <div className="mb-7" id= "details-section">
       <SectionTitle>{about?.sectionName}</SectionTitle>
       <CardWrapper>
         {about && (

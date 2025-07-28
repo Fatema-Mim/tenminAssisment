@@ -11,9 +11,8 @@ type CourseCardProps = {
 
 export default function CourseCard({ title, instructors, price, oldPrice, image, link }: CourseCardProps) {
   return (
-    <a
-  href={link}
-  className="cursor-pointer min-w-[200px] max-w-[200px] md:min-w-[272px] rounded-[6px] border border-[#E5E7EB] flex flex-col overflow-hidden transition-colors hover:border-green"
+    <div
+  className="cursor-pointer min-w-[200px] max-w-[200px] md:min-w-[272px] rounded-[6px] border border-[#E5E7EB] flex flex-col overflow-hidden transition-colors hover:border-green-600"
 >
   <div className="opacity-100" style={{ fontSize: 0 }}>
     <img
@@ -27,7 +26,6 @@ export default function CourseCard({ title, instructors, price, oldPrice, image,
     />
   </div>
   <div className="flex flex-1 flex-col justify-between gap-2 p-[14px] min-w-0" style={{ minHeight: "150px" }}>
-    {/* fixed minHeight here */}
     <div>
       <h2 className="mb-1 line-clamp-2 max-h-14 text-sm font-semibold md:text-lg">
         {title}
@@ -43,7 +41,7 @@ export default function CourseCard({ title, instructors, price, oldPrice, image,
       </div>
     </div>
   </div>
-</a>
+</div>
 
   );
 }

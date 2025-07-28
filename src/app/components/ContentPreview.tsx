@@ -38,7 +38,6 @@ const data = [
 ];
 
 export default function ContentPreview({contentPreview}: ContentPreviewProps) {
-  console.log(contentPreview)
 
   const [showAll, setShowAll] = useState(false);
 

@@ -23,28 +23,30 @@ import AnyQuestion from "./components/AnyQuestion";
 import MoreCourse from "./components/MoreCourse";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import LoadingSpinner from "./components/ui/LoadingSpinner";
 
 export default function Home() {
-  const [data, setData] = useState<CourseData | null>(null);
+   const [loading, setLoading] = useState<boolean>(true);
+   const [data, setData] = useState<CourseData | null>(null);
 
-  const [language, setLanguage] = useState<"en" | "bn">("en");
+   const [language, setLanguage] = useState<"en" | "bn">("en");
 
-  const toggleLanguage = () => {
-    const newLang = language === "en" ? "bn" : "en";
-    setLanguage(newLang);
-  };
+   const toggleLanguage = () => {
+      const newLang = language === "en" ? "bn" : "en";
+      setLanguage(newLang);
+   };
 
-  useEffect(() => {
-    getData(`/products/ielts-course`, { params: { lang: language } }).then(
-      (response) => {
-        const organizedData = courseData(response);
-        setData(organizedData);
-      }
-    );
-  }, [language]);
+   useEffect(() => {
+      getData('/products/ielts-course', { params: { lang: language } }).then((response) => {
+         const organizedData = courseData(response);
+         setData(organizedData);
+         setLoading(false);
+      });
+   }, [language]);
 
-  return (
-    <>
+   return (
+      <>
+         <LoadingSpinner show={loading} />
       <Navbar toggleLanguage={toggleLanguage} language={language} />
       <div>
         <Banner

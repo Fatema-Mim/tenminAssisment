@@ -8,7 +8,7 @@ interface PointersProps {
 }
 export default function Pointers({ pointers }: PointersProps) {
   return (
-    <div className="mb-6 md:mb-10 py-2 bg-white md:py-0">
+    <div className="mb-6 md:mb-10 py-2 bg-white md:py-0" id= "outcome-section">
       <SectionTitle>{pointers?.sectionName}</SectionTitle>
       <CardWrapper>
         <ul className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_1fr] md:gap-4">

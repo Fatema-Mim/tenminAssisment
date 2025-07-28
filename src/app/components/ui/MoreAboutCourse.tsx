@@ -4,7 +4,7 @@ export default function MoreAboutCourse() {
   return (
     <p className="justify-between hidden mt-4 text-sm text-center text-gray-400 md:flex md:flex-col lg:flex lg:flex-row">
       <span>কোর্সটি সম্পর্কে বিস্তারিত জানতে</span>
-      <span className="flex items-center justify-center ml-2 underline cursor-pointer text-green">
+      <span className="flex items-center justify-center ml-2 underline cursor-pointer text-green-600">
         <svg
           stroke="currentColor"
           fill="currentColor"
